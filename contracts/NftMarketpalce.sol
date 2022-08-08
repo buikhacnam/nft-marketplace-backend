@@ -28,7 +28,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 // Check out https://github.com/Fantom-foundation/Artion-Contracts/blob/5c90d2bc0401af6fb5abf35b860b762b31dfee02/contracts/FantomMarketplace.sol
 // For a full decentralized nft marketplace
 
-contract NftMarketplace {
+contract NftMarketplace is ReentrancyGuard {
     struct Listing {
         uint256 price;
         address seller;
@@ -111,6 +111,7 @@ contract NftMarketplace {
     function buyItem(address nftAddress, uint256 tokenId)
         external
         payable
+        nonReentrant // avoid reentrancy attacks: https://solidity-by-example.org/hacks/re-entrancy/
         isListed(nftAddress, tokenId)
     {
         Listing memory listedItem = s_listings[nftAddress][tokenId];
