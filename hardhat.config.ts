@@ -8,6 +8,7 @@ import 'hardhat-gas-reporter'
 import 'solidity-coverage'
 import 'hardhat-deploy'
 import 'hardhat-contract-sizer'
+import '@nomicfoundation/hardhat-toolbox'
 
 dotenv.config()
 
@@ -30,16 +31,13 @@ const config: config  = {
 					: [],
 			chainId: 4,
 		},
-		// localhost: {
-		// 	url: 'http://127.0.0.1:8545',
-		// 	chainId: 31337,
-		// 	// accounts: hardhat localhost node will pick up the first account
-		// },
+		localhost: {
+			url: 'http://127.0.0.1:8545',
+			chainId: 31337,
+			// accounts: hardhat localhost node will pick up the first account
+		},
 		hardhat: {
 			chainId: 31337,
-			forking: {
-				url: process.env.MAINET_RPC_URL!
-			}
 		}
 	},
 	gasReporter: {
