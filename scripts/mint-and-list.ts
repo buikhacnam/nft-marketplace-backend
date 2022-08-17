@@ -1,4 +1,5 @@
-import { ethers } from 'hardhat'
+import { ethers, network } from 'hardhat'
+import { moveBlocks } from '../utils/move-blocks'
 
 const PRICE = ethers.utils.parseEther('0.1')
 
@@ -30,6 +31,11 @@ async function mintAndList() {
 	)
 	await listTx.wait(1)
 	console.log('listTed:', listTx)
+
+	if (network.config.chainId == 31337) {
+        // Moralis has a hard time if you move more than 1 at once!
+        await moveBlocks(1)
+    }
 }
 
 mintAndList()

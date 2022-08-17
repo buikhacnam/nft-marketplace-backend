@@ -32,6 +32,10 @@ Run scripts:
 yarn hardhat run scripts/mint-and-list.ts
 ```
 
+```
+yarn hardhat run scripts/mint-and-list.ts --network localhost
+```
+
 Generate / update contract addresses and Abi:
 
 ```
