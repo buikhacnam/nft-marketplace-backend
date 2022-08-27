@@ -1,5 +1,9 @@
 # Hardhat NFT Marketplace Backend
 
+View the contract on Etherscan: 
+
+https://rinkeby.etherscan.io/address/0x99701f665b1CcE2F4b88ba7275606BFa71b28008#readContract
+
 - List NFTs on the market place
 
     There are 2 ways doing this:

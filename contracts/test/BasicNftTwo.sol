@@ -2,7 +2,7 @@
 pragma solidity ^0.8.7;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-
+// https://rinkeby.etherscan.io/address/0x60181829Ab2358C3e9e8edB694C57B5981DBc38A#code
 contract BasicNftTwo is ERC721 {
     string public constant TOKEN_URI = "ipfs://QmdryoExpgEQQQgJPoruwGJyZmz6SqV4FRTX1i73CT3iXn";
     uint256 private s_tokenCounter;
