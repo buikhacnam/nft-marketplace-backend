@@ -1,5 +1,7 @@
 # Hardhat NFT Marketplace Backend
 
+Live App: sellnft.vercel.app/about
+
 View the contract on Etherscan: 
 
 https://rinkeby.etherscan.io/address/0x99701f665b1CcE2F4b88ba7275606BFa71b28008#readContract
